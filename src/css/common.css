@@ -1,3 +1,171 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 .content {
   width: 100%;
+  background-color: #fff;
+}
+.header {
+  background-color: #ff841d;
+}
+.header .header-left {
+  height: 1rem;
+  padding: 0.24rem /* 12/50 */;
+}
+.header .header-left img {
+  width: 3.71rem;
+}
+.header .header-right {
+  height: 1rem;
+  padding: 0.18rem /* 9/50 */ 0.24rem /* 12/50 */;
+}
+.header .header-right img {
+  width: 0.68rem /* 34/50 */;
+}
+.search {
+  height: 1rem /* 50/50 */;
+  padding: 0.2rem /* 10/50 */ 0.24rem /* 12/50 */;
+  display: flex;
+  justify-content: space-between;
+}
+.search input {
+  width: 5.6rem /* 280/50 */;
+  height: 0.6rem /* 30/50 */;
+  background-color: #f1f1f1;
+  border-radius: 0.3rem /* 15/50 */;
+  padding: 0px 0.2rem;
+  font-size: 0.24rem /* 12/50 */;
+}
+.search button {
+  width: 1.3rem /* 65/50 */;
+  height: 0.6rem /* 30/50 */;
+  background-color: #ff841d;
+  color: #fff;
+  border-radius: 0.3rem /* 15/50 */;
+  font-size: 0.24rem /* 12/50 */;
+}
+.menu {
+  width: 100%;
+}
+.menu ul {
+  padding-bottom: 0.3rem /* 15/50 */;
+}
+.menu ul li {
+  width: 25%;
+  text-align: center;
+  margin-top: 0.3rem /* 15/50 */;
+}
+.menu ul li img {
+  width: 1rem /* 50/50 */;
+}
+.menu ul li p {
+  font-size: 0.24rem /* 12/50 */;
+}
+.menu ul li.conceal {
+  display: none;
+}
+.title {
+  width: 100%;
+  height: 0.7rem /* 35/50 */;
+  background-color: #FF9001;
+  line-height: 0.7rem;
+  font-size: 0.24rem;
+  color: #fff;
+  padding: 0 0.24rem /* 12/50 */;
+  display: flex;
+  justify-content: space-between;
+}
+.title img {
+  width: 0.4rem /* 20/50 */;
+  height: 0.4rem /* 20/50 */;
+  margin-top: 0.14rem /* 7/50 */;
+}
+.title-product li {
+  padding: 0.24rem /* 12/50 */;
+  border-bottom: 1px solid #ccc;
+}
+.title-product li .sales-list {
+  display: flex;
+}
+.title-product li .sales-list .pic {
+  width: 2rem /* 100/50 */;
+  height: 2rem /* 100/50 */;
+}
+.title-product li .sales-list .pic img {
+  width: 100%;
+  height: 100%;
+}
+.title-product li .sales-list .info {
+  padding-left: 0.24rem /* 12/50 */;
+  flex: 1;
+  font-size: 0.32rem /* 16/50 */;
+  position: relative;
+}
+.title-product li .sales-list .info .content .price {
+  color: red;
+}
+.title-product li .sales-list .info .others {
+  width: 100%;
+  padding-left: 0.24rem /* 12/50 */;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 0.24rem /* 12/50 */;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.title-product li .sales-list .info .others span:nth-child(2) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.title-product button {
+  display: block;
+  background-color: #F4F4F4;
+  width: 96%;
+  height: 0.6rem /* 30/50 */;
+  margin: 0.2rem /* 10/50 */ auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.title-brand {
+  width: 100%;
+  height: 100px;
+}
+.footer .nav {
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.footer .nav .login,
+.footer .nav .register,
+.footer .nav .back-top {
+  flex: 1;
+  text-align: center;
+  height: 0.68rem /* 34/50 */;
+  line-height: 0.68rem /* 34/50 */;
+  font-size: 0.28rem /* 14/50 */;
+}
+.footer .nav .login img,
+.footer .nav .register img,
+.footer .nav .back-top img {
+  width: 0.28rem /* 14/50 */;
+  height: 0.28rem /* 14/50 */;
+}
+.footer .nav .register {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.footer .foot {
+  padding: 0.4rem /* 20/50 */ 0;
+}
+.footer .foot p {
+  text-align: center;
+  font-size: 0.24rem /* 12/50 */;
+  color: #666;
+}
+.footer .foot p a:nth-child(1) {
+  color: red;
 }

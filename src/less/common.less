@@ -1,3 +1,182 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
 .content{
     width: 100%;
+    background-color: #fff;
+}
+.header{
+    background-color: #ff841d;
+    .header-left{
+        height: 1rem;
+        padding: .24rem /* 12/50 */;
+        img{
+            width: 185.5/50rem;
+        }
+    }
+    .header-right{
+        height: 1rem;
+        padding: .18rem /* 9/50 */ .24rem /* 12/50 */;
+        img{
+            width: .68rem /* 34/50 */;
+        }
+    }
+}
+
+.search{
+    height: 1rem /* 50/50 */;
+    padding: .2rem /* 10/50 */ .24rem /* 12/50 */;
+    display: flex;
+    justify-content: space-between;
+    
+    input{
+        width: 5.6rem /* 280/50 */;
+        height: .6rem /* 30/50 */;
+        background-color: #f1f1f1;
+        border-radius: .3rem /* 15/50 */;
+        padding: 0px 10/50rem;
+        font-size: .24rem /* 12/50 */;
+    }
+    button{
+        width: 1.3rem /* 65/50 */;
+        height: .6rem /* 30/50 */;
+        background-color: #ff841d;
+        color: #fff;
+        border-radius: .3rem /* 15/50 */;
+        font-size: .24rem /* 12/50 */;
+    }
+
+}
+.menu{
+    width: 100%;
+    ul{
+        padding-bottom: .3rem /* 15/50 */;
+        li{
+            width: 25%;
+            text-align: center;
+            margin-top: .3rem /* 15/50 */;
+            img{
+                width:1rem /* 50/50 */;
+            }
+            p{
+                font-size: .24rem /* 12/50 */;
+            }
+            &.conceal{
+                display: none;
+            }
+        }
+    }
+
+}
+.title{
+    width: 100%;
+    height: .7rem /* 35/50 */;
+    background-color: #FF9001;
+    line-height: .7rem;
+    font-size:.24rem;
+    color: #fff;
+    padding:0 .24rem /* 12/50 */;
+    display: flex;
+    justify-content:space-between;
+    img{
+        width: .4rem /* 20/50 */;
+        height: .4rem /* 20/50 */;
+        margin-top: .14rem /* 7/50 */;
+    }
+}
+
+.title-product{
+    li{
+        padding: .24rem /* 12/50 */;
+        border-bottom: 1px solid #ccc;
+        .sales-list{
+            display: flex;
+            .pic{
+                width: 2rem /* 100/50 */;
+                height: 2rem /* 100/50 */;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .info{
+                padding-left: .24rem /* 12/50 */;
+                flex: 1;
+                font-size: .32rem /* 16/50 */;
+                position: relative;
+                .content{
+                    .price{
+                        color: red;
+                    }
+                }
+                .others{
+                    width: 100%;
+                    padding-left: .24rem /* 12/50 */;
+                    justify-content: space-between;
+                    color: #ccc;
+                    font-size: .24rem /* 12/50 */;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    span:nth-child(2){
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    button{
+        display: block;
+        background-color: #F4F4F4;
+        width: 96%;
+        height: .6rem /* 30/50 */;
+        margin: .2rem /* 10/50 */ auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+    }
+}
+
+.title-brand{
+    width: 100%;
+    height: 100px;
+}
+
+.footer{
+    .nav{
+        display: flex;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        .login,
+        .register,
+        .back-top{
+            flex: 1;
+            text-align: center;
+            height: .68rem /* 34/50 */;
+            line-height: .68rem /* 34/50 */;
+            font-size: .28rem /* 14/50 */;
+            img{
+                width: .28rem /* 14/50 */;
+                height: .28rem /* 14/50 */;
+            }
+        }
+        .register{
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+    }
+    .foot{
+        padding: .4rem /* 20/50 */ 0;
+        p{
+            text-align: center;
+            font-size: .24rem /* 12/50 */;
+            color: #666;
+            a:nth-child(1){
+                color: red;
+            }
+        }
+    }
 }

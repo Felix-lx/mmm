@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,110 @@
     <title>买买买</title>
     <link rel="stylesheet" href="./css/reset-mobile.css">
     <link rel="stylesheet" href="./css/common.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
 </head>
+
 <body>
     <div class="content">
-        <header class="header">
-            
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left fl">
+                <a href="javascript:;">
+                    <img src="./img/header_logo.png">
+                </a>
+            </div>
+            <div class="header-right fr">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
         </header>
+        <!-- 搜索框 -->
+        <section class="search">
+            <input type="text" class="searchbox" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </section>
+        <!-- 主菜单 -->
+        <section class="menu">
+            <ul class="clearfix">模板引擎</ul>
+        </section>
+        <!-- sales -->
+        <section class="title">
+            <span class="">超值折扣推荐</span>
+            <img src="http://www.zuyushop.com/wap/images/more.png">
+        </section>
+        <section class="title-product">
+            <ul>模板引擎</ul>
+        </section>
+        <!-- 品牌 -->
+        <section class="title">
+            <span class="">品牌排行</span>
+            <img src="http://www.zuyushop.com/wap/images/more.png">
+        </section>
+        <section class="title-brand">
+        </section>
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </footer>
     </div>
+
+
+    <script src="./lib/template-web.js"></script>
+    <script type="text/html" id="tpl">
+        {{each result v i}}
+        {{if i< 8 }}
+        <li class="fl">
+            <a href="{{v.titlehref}}">
+                <img src="./img/{{v.img}}" alt="">
+                <p>{{v.name}}</p>
+            </a>
+        </li>
+        {{else}}
+        <li class="fl conceal">
+            <a href="{{v.titlehref}}">
+                <img src="./img/{{v.img}}">
+                <p>{{v.name}}</p>
+            </a>
+        </li>
+        {{/if}}
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+        {{each result v i }}
+        <li>
+            <a href="#" class="sales-list">
+                <div class="pic">
+                    <img src="{{v.productImgLg.src}}" alt="{{v.productImgSm.alt}}">
+                </div>
+                <div class="info">
+                    <div class="content two-txt-cut">{{v.productName}} <span class="price">{{v.productPinkage}}</span>
+                         </div>
+                    <div class="others">
+                        <span>{{v.productFrom}} | {{v.productTime}}</span>
+                        <span>{{v.productComCount}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+        <button> <a href="javascript:;">更多优惠信息 »</a></button>
+    </script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
