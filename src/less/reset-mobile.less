@@ -1,0 +1,166 @@
+/* 移动端 初始样式start */
+a,
+b,
+body,
+dd,
+del,
+div,
+dd,
+dl,
+dt,
+em,
+form,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+ins,
+input,
+label,
+legend,
+li,
+ol,
+p,
+pre,
+section,
+small,
+span,
+strong,
+table,
+th,
+tr,
+td,
+tbody,
+u,
+ul,
+var
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* 去边框 */
+fieldset,
+img,
+input,
+button,
+textarea {
+    border: none;
+    /*去除的蓝色小边框*/
+    outline-style: none;
+}
+/* 移动端图片自适应 */
+img{
+    vertical-align: middle; 
+}
+
+/* 小标签废物利用 */
+em,
+i,
+u {
+    font-style: normal;
+}
+/*禁止表单域缩放*/
+textarea {
+    resize: none;
+}
+
+/* 左边浮动 */
+.fl {
+    float: left;
+}
+
+/* 右边浮动 */
+.fr {
+    float: right;
+}
+
+/* 相对定位 */
+.p-r {
+    position: relative;
+}
+
+/* 绝对定位 */
+.p-s {
+    position: absolute;
+}
+
+/* 伪元素清除浮动 */
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* 兼容IE6 IE7 */
+.clearfix {
+    *zoom: 1;
+}
+
+/* 文字溢出单行省略显示 */
+.eps {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*单行溢出，只针对移动端*/
+.one-txt-cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+/*两行溢出，只针对移动端*/
+.two-txt-cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+body {
+    font: 12px/1.5 'microsoft yahei', Arial, Verdana, "\5b8b\4f53";
+    color: #000;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'microsoft yahei';
+    /* 取消链接高亮 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* 初始样式end*/
