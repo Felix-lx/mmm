@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/productlist.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left fl">
+                <a href="javascript:;">
+                    <img src="./img/header_logo.png">
+                </a>
+            </div>
+            <div class="header-right fr">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+        <!-- 搜索框 -->
+        <section class="search">
+            <input type="text" class="searchbox" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </section>
+
+        <!-- 面包屑 -->
+        <ol class="breadcrumb">
+            <!-- 模板引擎 -->
+        </ol>
+        <!-- 产品列表 -->
+        <section class="productlist">
+            <ul>
+                <!-- 模板引擎 -->
+            </ul>
+        </section>
+
+        <!-- 分页 -->
+        <div class="mui-content-padded pages">
+            <ul class="mui-pagination mui-pagination-sm pages-box">
+                <!-- 模板引擎 -->
+            </ul>
+        </div>
+
+        <!-- 尾部 -->
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </footer>
+    </div>
+    <script src="lib/template-web.js"></script>
+    <script type="text/html" id="tpl">
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./category.html">全部分类</a></li>
+        <li class="active">{{result.category}}</li>
+    </script>
+    <script type="text/html" id="tpl2">
+        {{each result.list v i}}
+        <li>
+            <a href="#" class="sales-list">
+                <div class="pic">
+                    <img src="{{v.productImg.src}}" alt="{{v.productImg.alt}}">
+                </div>
+                <div class="info">
+                    <div class="content two-txt-cut">{{v.productName}} </div>
+                    <div class="price">{{v.productPrice}}</div>
+                    <div class="others">
+                        <span>{{v.productQuote}} | {{v.productCom}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpl3">
+        <li class="mui-previous"><a href="javascript:;" class="pages-prev">«</a></li>
+        {{each page v i}}
+        {{if v===1}}
+        <li class="mui-active pages-li"><a href="javascript:;" class="pages-a" data-id="{{v}}">{{v}}</a></li>
+        {{else}}
+        <li class="pages-li"><a href="javascript:;" class="pages-a" data-id="{{v}}">{{v}}</a></li>
+        {{/if}}
+        {{/each}}
+        <li class="mui-next"><a href="javascript:;" class="pages-next">»</a></li>
+    </script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/productlist.js"></script>
+</body>
+
+</html>

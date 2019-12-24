@@ -20,9 +20,4 @@ $(function(){
         }
     })
 
-    $('.back-top').on('click',function(){
-        // $(window).scrollTop(0)
-        $('html').animate({scrollTop:0},500,'linear')
-    })
-    
 })

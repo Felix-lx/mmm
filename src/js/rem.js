@@ -8,3 +8,10 @@ $(window).on('resize', function () {
     $('html').css('fontSize',fontSize+'px')
 })
 $(window).resize()
+
+$(function(){
+    $('.back-top').on('click',function(){
+        // $(window).scrollTop(0)
+        $('html').animate({scrollTop:0},500,'linear')
+    })
+})
