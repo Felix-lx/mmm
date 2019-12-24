@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/reset-mobile.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/productlist.css">
+    <link rel="stylesheet" href="./css/productdetails.css">
     <script src="./lib/jquery-3.4.1.js"></script>
     <script src="./js/rem.js"></script>
 </head>
@@ -20,7 +20,7 @@
         <!-- 头部 -->
         <header class="header clearfix">
             <div class="header-left fl">
-                <a href="javascript:;">
+                <a href="index.html">
                     <img src="./img/header_logo.png">
                 </a>
             </div>
@@ -41,18 +41,14 @@
             <!-- 模板引擎 -->
         </ol>
         <!-- 产品列表 -->
-        <section class="productlist">
-            <ul>
-                <!-- 模板引擎 -->
-            </ul>
+        <section class="productdetails">
+            <div class="box-productdetails">
+                <!-- 产品信息模板引擎 -->
+            </div>
+            <div class="box-productevaluate">
+                <!-- 产品详情模板引擎 -->
+            </div>
         </section>
-
-        <!-- 分页 -->
-        <div class="mui-content-padded pages">
-            <ul class="mui-pagination mui-pagination-sm pages-box">
-                <!-- 模板引擎 -->
-            </ul>
-        </div>
 
         <!-- 尾部 -->
         <footer class="footer">
@@ -73,48 +69,66 @@
             </div>
         </footer>
     </div>
+    <!-- 模板引擎模板 -->
     <script src="lib/template-web.js"></script>
-    <!-- 面包屑渲染 -->
+    <!-- 面包屑 -->
     <script type="text/html" id="tpl">
         <li><a href="./index.html">首页</a></li>
         <li><a href="./category.html">全部分类</a></li>
-        <li class="active">{{result.category}}</li>
+        <li><a href= "javascript:history.go(-1);" >{{result.category}}</a></li>
+        <li class="active">{{result.productName}}</li>
     </script>
-    <!-- 商品列表渲染 -->
+
     <script type="text/html" id="tpl2">
-        {{each result.list v i}}
-        <li>
-            <a href="./productdetails.html?categoryId={{v.categoryId}}&productId={{v.productId}}" class="sales-list">
-                <div class="pic">
-                    <img src="{{v.productImg.src}}" alt="{{v.productImg.alt}}">
-                </div>
-                <div class="info">
-                    <div class="content two-txt-cut">{{v.productName}} </div>
-                    <div class="price">{{v.productPrice}}</div>
-                    <div class="others">
-                        <span>{{v.productQuote}} | {{v.productCom}}</span>
-                    </div>
-                </div>
+        <h3>{{result.productName}}</h3>
+        <div class="pro-img">
+            <img src="{{result.productImg.src}}" alt="{{result.productImg.alt}}">
+        </div>
+        <div class="pro-collect clearfix">
+            <a href="javascript:;" class="fr">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
             </a>
-        </li>
-        {{/each}}
+        </div>
+        <ul class="tab">
+            <li><a href="#">比价购买</a></li>
+            <li><a href="#">产品参数</a></li>
+            <li><a href="#">评价</a></li>
+        </ul>
+        <div class="buy">
+            <div class="buy-top clearfix">
+                <div class="buy-top-left fl">
+                    <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                    <span>京东商城</span>
+                </div>
+                <div class="buy-top-right fr">
+                    <span class="price">{{result.bjShop}}</span>
+                    <button>去购买</button>
+                </div>
+            </div>
+            <div class="buy-bottom">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+        </div>
     </script>
-    <!-- 分页渲染 -->
     <script type="text/html" id="tpl3">
-        <li class="mui-previous"><a href="javascript:;" class="pages-prev">«</a></li>
-        {{each page v i}}
-        {{if v===1}}
-        <li class="mui-active pages-li"><a href="javascript:;" class="pages-a" data-id="{{v}}">{{v}}</a></li>
-        {{else}}
-        <li class="pages-li"><a href="javascript:;" class="pages-a" data-id="{{v}}">{{v}}</a></li>
-        {{/if}}
+        <div class="title-evaluate">网友评价</div>
+        {{each result v i}}
+        <div class="pro-evaluate">
+            <div class="information clearfix">
+                <span class="name fl">{{v.comName}}</span>
+                <span class="time fr">{{v.comTime}}</span>
+            </div>
+            <div class="from clearfix">
+                <div class="fr">{{comFrom}}</div>
+            </div>
+            <div class="content">{{v.comContent}}</div>
+        </div>
         {{/each}}
-        <li class="mui-next"><a href="javascript:;" class="pages-next">»</a></li>
     </script>
+
+
+
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-
-    <script src="./js/productlist.js"></script>
+    <script src="./js/productdetails.js"></script>
 </body>
 
 </html>

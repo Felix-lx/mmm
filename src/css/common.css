@@ -46,6 +46,9 @@ body {
   border-radius: 0.3rem /* 15/50 */;
   font-size: 0.24rem /* 12/50 */;
 }
+.footer {
+  padding-top: 0.24rem /* 12/50 */;
+}
 .footer .nav {
   display: flex;
   border-top: 1px solid #ddd;
