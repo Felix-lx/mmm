@@ -9,32 +9,39 @@
 .pages .mui-pagination > li > a {
   color: #333;
 }
-.productlist li {
+.productlist li,
+.title-product li {
   padding: 0.24rem /* 12/50 */;
   border-bottom: 1px solid #ccc;
 }
-.productlist li .sales-list {
+.productlist li .sales-list,
+.title-product li .sales-list {
   display: flex;
 }
-.productlist li .sales-list .pic {
+.productlist li .sales-list .pic,
+.title-product li .sales-list .pic {
   width: 2rem /* 100/50 */;
   height: 2rem /* 100/50 */;
 }
-.productlist li .sales-list .pic img {
+.productlist li .sales-list .pic img,
+.title-product li .sales-list .pic img {
   width: 100%;
   height: 100%;
 }
-.productlist li .sales-list .info {
+.productlist li .sales-list .info,
+.title-product li .sales-list .info {
   padding-left: 0.24rem /* 12/50 */;
   flex: 1;
   font-size: 0.24rem /* 12/50 */;
   position: relative;
 }
-.productlist li .sales-list .info .price {
+.productlist li .sales-list .info .price,
+.title-product li .sales-list .info .price {
   color: red;
   padding-top: 0.28rem /* 14/50 */;
 }
-.productlist li .sales-list .info .others {
+.productlist li .sales-list .info .others,
+.title-product li .sales-list .info .others {
   width: 100%;
   padding-left: 0.24rem /* 12/50 */;
   justify-content: space-between;
@@ -42,5 +49,11 @@
   font-size: 0.24rem /* 12/50 */;
   position: absolute;
   left: 0;
+  bottom: 0;
+}
+.productlist li .sales-list .info .others span:nth-child(2),
+.title-product li .sales-list .info .others span:nth-child(2) {
+  position: absolute;
+  right: 0;
   bottom: 0;
 }

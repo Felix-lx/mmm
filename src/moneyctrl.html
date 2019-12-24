@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>买买买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="./css/reset-mobile.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/productlist.css">
     <script src="./lib/jquery-3.4.1.js"></script>
     <script src="./js/rem.js"></script>
 </head>
@@ -18,7 +19,7 @@
         <!-- 头部 -->
         <header class="header clearfix">
             <div class="header-left fl">
-                <a href="./index.html">
+                <a href="index.html">
                     <img src="./img/header_logo.png">
                 </a>
             </div>
@@ -28,34 +29,20 @@
                 </a>
             </div>
         </header>
-        <!-- 搜索框 -->
-        <section class="search">
-            <input type="text" class="searchbox" placeholder="请输入你想比价的商品">
-            <button type="button">搜索</button>
-        </section>
-        <!-- 主菜单 -->
-        <section class="menu">
-            <ul class="clearfix">
-                <!-- 模板引擎 -->
-            </ul>
-        </section>
-        <!-- sales -->
-        <section class="title">
-            <span class="">超值折扣推荐</span>
-            <img src="http://www.zuyushop.com/wap/images/more.png">
-        </section>
+        <!-- 商品列表 -->
         <section class="title-product">
             <ul>
                 <!-- 模板引擎 -->
             </ul>
         </section>
-        <!-- 品牌 -->
-        <section class="title">
-            <span class="">品牌排行</span>
-            <img src="http://www.zuyushop.com/wap/images/more.png">
-        </section>
-        <section class="title-brand">
-        </section>
+        <!-- 分页 -->
+        <div class="mui-content-padded pages">
+            <ul class="mui-pagination mui-pagination-sm pages-box">
+                <!-- 模板引擎 -->
+            </ul>
+        </div>
+
+        <!-- 尾部 -->
         <footer class="footer">
             <div class="nav">
                 <span class="login">登录</span>
@@ -74,32 +61,13 @@
             </div>
         </footer>
     </div>
+    <script src="lib/template-web.js"></script>
 
-
-    <script src="./lib/template-web.js"></script>
-    <script type="text/html" id="tpl">
-        {{each result v i}}
-        {{if i< 8 }}
-        <li class="fl">
-            <a href="{{v.titlehref}}.html">
-                <img src="./img/{{v.img}}" alt="">
-                <p>{{v.name}}</p>
-            </a>
-        </li>
-        {{else}}
-        <li class="fl conceal">
-            <a href="{{v.titlehref}}">
-                <img src="./img/{{v.img}}">
-                <p>{{v.name}}</p>
-            </a>
-        </li>
-        {{/if}}
-        {{/each}}
-    </script>
+    <!-- 商品列表渲染 -->
     <script type="text/html" id="tpl2">
         {{each result v i }}
         <li>
-            <a href="#" class="sales-list">
+            <a href="./moneyproduct.html?productid={{v.productId}}" class="sales-list">
                 <div class="pic">
                     <img src="{{v.productImgLg.src}}" alt="{{v.productImgSm.alt}}">
                 </div>
@@ -114,9 +82,21 @@
             </a>
         </li>
         {{/each}}
-        <button> <a href="javascript:;">更多优惠信息 »</a></button>
     </script>
-    <script src="./js/index.js"></script>
+    <!-- 分页渲染 -->
+    <script type="text/html" id="tpl3">
+        <li class="mui-previous"><a href="javascript:;" class="pages-prev">«</a></li>
+        {{each page v i}}
+        {{if v===1}}
+        <li class="mui-active pages-li"><a href="javascript:;" class="pages-a" data-id="{{v}}">{{v}}</a></li>
+        {{else}}
+        <li class="pages-li"><a href="javascript:;" class="pages-a" data-id="{{v}}">{{v}}</a></li>
+        {{/if}}
+        {{/each}}
+        <li class="mui-next"><a href="javascript:;" class="pages-next">»</a></li>
+    </script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/moneyctrl.js"></script>
 </body>
 
 </html>

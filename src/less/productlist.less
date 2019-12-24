@@ -1,3 +1,4 @@
+// productlist页面和moneyctrl页面共用
 .pages{
     text-align: center;
     .mui-pagination>li.mui-active>a{
@@ -9,7 +10,8 @@
         color:#333;
     }
 }
-.productlist{
+.productlist,
+.title-product{
     li{
         padding: .24rem /* 12/50 */;
         border-bottom: 1px solid #ccc;
@@ -41,6 +43,11 @@
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                    span:nth-child(2){
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
                 }
             }
         }

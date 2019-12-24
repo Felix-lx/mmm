@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyproduct.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left fl">
+                <a href="index.html">
+                    <img src="./img/header_logo.png">
+                </a>
+            </div>
+            <div class="header-right fr">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+
+        <!-- 产品详情 -->
+        <section class="mp-details">
+            <div class="box-mp-details">
+                <!-- 产品信息模板引擎 -->
+            </div>
+            <div class="box-mp-advertisement">
+                <img src="" alt="">
+            </div>
+            <div class="box-mp-evaluate">
+                <!-- 产品详情模板引擎 -->
+            </div>
+        </section>
+
+    </div>
+    <!-- 模板引擎模板 -->
+    <script src="lib/template-web.js"></script>
+
+    <script type="text/html" id="tpl2">
+        <h3>{{result.productName}}</h3>
+        <div class="pro-img">
+            <img src="{{result.productImg.src}}" alt="{{result.productImg.alt}}">
+        </div>
+        <div class="pro-collect clearfix">
+            <a href="javascript:;" class="fr">
+                <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="">
+            </a>
+        </div>
+        <ul class="tab">
+            <li><a href="#">比价购买</a></li>
+            <li><a href="#">产品参数</a></li>
+            <li><a href="#">评价</a></li>
+        </ul>
+        <div class="buy">
+            <div class="buy-top clearfix">
+                <div class="buy-top-left fl">
+                    <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                    <span>京东商城</span>
+                </div>
+                <div class="buy-top-right fr">
+                    <span class="price">{{result.bjShop}}</span>
+                    <button>去购买</button>
+                </div>
+            </div>
+            <div class="buy-bottom">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+        </div>
+    </script>
+
+    <script type="text/html" id="tpl3">
+        <div class="title-evaluate">网友评价</div>
+        {{each result v i}}
+        <div class="pro-evaluate">
+            <div class="information clearfix">
+                <span class="name fl">{{v.comName}}</span>
+                <span class="time fr">{{v.comTime}}</span>
+            </div>
+            <div class="from clearfix">
+                <div class="fr">{{comFrom}}</div>
+            </div>
+            <div class="content">{{v.comContent}}</div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/moneyproduct.js"></script>
+</body>
+
+</html>
