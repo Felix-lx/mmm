@@ -1,0 +1,36 @@
+.category{
+    padding-bottom: 2rem /* 100/50 */;
+    .category-title{
+        border: 1px solid #ccc;
+        li{
+            .category-menu-title{
+                display: block;
+                width: 100%;
+                background-color: #f1f1f1;
+                border-radius: 4px;
+                border-bottom: 1px solid #ccc;
+                padding: 0 .24rem /* 12/50 */;
+                font: .32rem/.8rem '微软雅黑';
+            }
+            .category-content{
+                .second-content{
+                    width: 33.3%;
+                    .second-content-a{  
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        line-height: .8rem /* 40/50 */;
+                        border-bottom: .5px solid #ccc;
+                        border-right: .5px solid #ccc;
+                        &:nth-child(3n){
+                            border-right: 0px solid #ccc;
+                        }
+                    }
+                }
+                &.hidden{
+                    display: none;
+                }
+            }
+        }
+    }
+}
