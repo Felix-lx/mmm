@@ -1,3 +1,20 @@
+.header {
+  background-color: #ff841d;
+}
+.header .header-left {
+  height: 1rem;
+  padding: 0.24rem /* 12/50 */;
+}
+.header .header-left img {
+  width: 3.71rem;
+}
+.header .header-right {
+  height: 1rem;
+  padding: 0.18rem /* 9/50 */ 0.24rem /* 12/50 */;
+}
+.header .header-right img {
+  width: 0.68rem /* 34/50 */;
+}
 .category {
   padding-bottom: 2rem /* 100/50 */;
 }

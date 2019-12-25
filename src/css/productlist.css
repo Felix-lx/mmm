@@ -1,3 +1,48 @@
+.header {
+  background-color: #ff841d;
+}
+.header .header-left {
+  height: 1rem;
+  padding: 0.24rem /* 12/50 */;
+}
+.header .header-left img {
+  width: 3.71rem;
+}
+.header .header-right {
+  height: 1rem;
+  padding: 0.18rem /* 9/50 */ 0.24rem /* 12/50 */;
+}
+.header .header-right img {
+  width: 0.68rem /* 34/50 */;
+}
+.header2 {
+  background-color: #ff841d;
+  display: flex;
+}
+.header2 .header-left,
+.header2 .header-right {
+  width: 1rem;
+  height: 1rem;
+}
+.header2 .header-left a,
+.header2 .header-right a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font: 500 24px/1rem Aril;
+  color: #fff;
+}
+.header2 .header-left a img,
+.header2 .header-right a img {
+  width: 0.68rem /* 34/50 */;
+}
+.header2 .header-center {
+  flex: 1;
+  font: 500 24px/1rem Aril;
+  text-align: center;
+  color: #fff;
+}
 .pages {
   text-align: center;
 }
