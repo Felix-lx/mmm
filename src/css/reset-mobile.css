@@ -139,9 +139,13 @@ body {
   color: #000;
   background-color: #f7f7f7;
 }
-a {
+a,
+a.hover,
+a.visited,
+a.active,
+a:focus {
   color: #333;
-  text-decoration: none;
+  text-decoration: none!important;
   font-family: 'microsoft yahei';
   /* 取消链接高亮 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

@@ -1,0 +1,77 @@
+.mp-details {
+  padding: 0.24rem /* 12/50 */;
+}
+.mp-details .box-mp-details .info {
+  padding: 0.24rem /* 12/50 */ 0;
+}
+.mp-details .box-mp-details .img-sm {
+  width: 2.4rem /* 120/50 */;
+  margin: 12px 0 12px 12px;
+}
+.mp-details .box-mp-details .conn p {
+  font-size: 16px;
+}
+.mp-details .box-mp-details .conn .img-lg {
+  text-align: center;
+  margin: 0.2rem /* 10/50 */ 0;
+}
+.mp-details .box-mp-details .area {
+  text-align: center;
+}
+.mp-details .box-mp-details .area ul {
+  width: 3.5rem /* 175/50 */;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 0px 5px 8px #ccc;
+}
+.mp-details .box-mp-details .area ul li {
+  border-bottom: 1px dashed #ccc;
+}
+.mp-details .box-mp-details .area ul li a {
+  display: block;
+  display: flex;
+}
+.mp-details .box-mp-details .area ul li a span {
+  flex: 1;
+}
+.mp-details .box-mp-details .area ul li a span:nth-child(2) {
+  color: orange;
+}
+.mp-details .box-mp-details .go-buy {
+  margin: 0.4rem /* 20/50 */ 0.2rem /* 10/50 */;
+  background-color: #FF9000;
+  border-radius: 4px;
+}
+.mp-details .box-mp-details .go-buy a {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+.mp-details .box-mp-advertisement img {
+  width: 100%;
+}
+.mp-details .box-mp-evaluate .evaluate-title {
+  font-size: 16px;
+  margin: 0.2rem /* 10/50 */ 0;
+}
+.mp-details .box-mp-evaluate .send-evaluate {
+  border: 2px solid #ECEAE8;
+  background-color: #fbfbfb;
+}
+.mp-details .box-mp-evaluate .send-evaluate button {
+  background-color: #FF9000;
+  color: #fff;
+}
+.mp-details .box-mp-evaluate .new-evaluate {
+  display: flex;
+}
+.mp-details .box-mp-evaluate .new-evaluate .head-portrait img {
+  width: 40px;
+  height: 40px;
+}
+.mp-details .box-mp-evaluate .new-evaluate .new-evaluate-content {
+  flex: 1;
+  padding-left: 12px;
+}

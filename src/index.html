@@ -99,7 +99,7 @@
     <script type="text/html" id="tpl2">
         {{each result v i }}
         <li>
-            <a href="#" class="sales-list">
+            <a href="./moneyproduct.html?productid={{v.productId}}" class="sales-list">
                 <div class="pic">
                     <img src="{{v.productImgLg.src}}" alt="{{v.productImgSm.alt}}">
                 </div>
@@ -114,7 +114,7 @@
             </a>
         </li>
         {{/each}}
-        <button> <a href="javascript:;">更多优惠信息 »</a></button>
+        <button> <a href="./moneyctrl.html">更多优惠信息 »</a></button>
     </script>
     <script src="./js/index.js"></script>
 </body>
