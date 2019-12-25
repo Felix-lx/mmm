@@ -3,10 +3,15 @@
 }
 .mp-details .box-mp-details .info {
   padding: 0.24rem /* 12/50 */ 0;
+  color: #bbb;
 }
 .mp-details .box-mp-details .img-sm {
-  width: 2.4rem /* 120/50 */;
-  margin: 12px 0 12px 12px;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 12px 12px;
+}
+.mp-details .box-mp-details .img-sm img {
+  width: 100%;
 }
 .mp-details .box-mp-details .conn p {
   font-size: 16px;
@@ -38,7 +43,7 @@
   color: orange;
 }
 .mp-details .box-mp-details .go-buy {
-  margin: 0.4rem /* 20/50 */ 0.2rem /* 10/50 */;
+  margin: 0.6rem /* 20/50 */ 0.2rem /* 10/50 */;
   background-color: #FF9000;
   border-radius: 4px;
 }

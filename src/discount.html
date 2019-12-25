@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyproduct.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left fl">
+                <a href="index.html">
+                    <img src="./img/header_logo.png">
+                </a>
+            </div>
+            <div class="header-right fr">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+
+        <!-- 产品详情 -->
+        <section class="mp-details">
+            <!-- 模板引擎tpl -->
+        </section>
+        <!-- 尾部 -->
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </footer>
+
+    </div>
+    <!-- 模板引擎模板 -->
+    <script src="lib/template-web.js"></script>
+
+    <!-- 模板引擎tpl -->
+    <script type="text/html" id="tpl">
+        <div class="box-mp-details clearfix">
+            <h3>{{result.productName}}</h3>
+            <div class="info">
+                <span>{{result.productFrom}}</span>
+                <span>{{result.productTips}}</span>
+            </div>
+            <div class="img-sm fr">
+                <img src="{{result.productImg.src}}" alt="{{result.productImg.alt}}">
+            </div>
+            <div class="conn">
+                <p>{{result.productInfo}}</p>
+                <p>{{result.productName}}</p>
+                <div class="img-lg">
+                    
+                </div>
+            </div>
+            <div class="area">
+
+            </div>
+            <div class="go-buy"><a href="javascript:;">前往购买</a></div>
+        </div>
+        <div class="box-mp-advertisement">
+            <img src="./img/mmbweixin2.png" alt="">
+        </div>
+        <div class="box-mp-evaluate">
+            <div class="evaluate-title ">发表评论</div>
+            <div class="send-evaluate clearfix">
+                <textarea name="" id="" cols="30" rows="5"></textarea>
+                <button class="fr">发表评论</button>
+            </div>
+            <div class="evaluate-title">最新评论</div>
+            <div class="new-evaluate clearfix">
+                <div class="head-portrait">
+                    <img src="./img/ic_bcj.png" alt="">
+                </div>
+                <div class="new-evaluate-content">
+                    <div class="clearfix"><span class="name fl">mingzi</span><span class="time fr">2019/9/9</span>
+                    </div>
+                    <p>比超市便宜几块</p>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/discount.js"></script>
+</body>
+
+</html>

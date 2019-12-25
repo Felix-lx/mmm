@@ -1,0 +1,32 @@
+.main .inland-discount ul .inland-Product {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+}
+.main .inland-discount ul .inland-Product:nth-child(odd) {
+  border-right: 1px solid #ccc;
+}
+.main .inland-discount ul .inland-Product a {
+  display: block;
+}
+.main .inland-discount ul .inland-Product .pic {
+  text-align: center;
+  padding: 0.2rem /* 10/50 */;
+  height: 3.2rem;
+}
+.main .inland-discount ul .inland-Product .pic img {
+  width: 2.8rem /* 140/50 */;
+  height: 2.8rem /* 140/50 */;
+}
+.main .inland-discount ul .inland-Product p {
+  height: 36px;
+  padding: 0 0.2rem /* 10/50 */;
+  font: 700 14px arial;
+}
+.main .inland-discount ul .inland-Product .price {
+  padding: 0.1rem /* 5/50 */ 0.2rem /* 10/50 */;
+  color: red;
+}
+.main .inland-discount ul .inland-Product .from {
+  padding: 0.1rem /* 5/50 */ 0.2rem /* 10/50 */;
+  color: #ccc;
+}
