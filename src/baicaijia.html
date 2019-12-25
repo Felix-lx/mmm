@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left fl">
+                <a href="./index.html">
+                    <img src="./img/header_logo.png">
+                </a>
+            </div>
+            <div class="header-right fr">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+        <!-- 主要区域 -->
+        <section class="main">
+            <!-- 标题 -->
+            <div class="bcj-title">
+                <div class="tab-outbox">
+                    <ul class="tab-inbox clearfix">
+                        <!-- 模板引擎tpl -->
+                    </ul>
+                </div>
+            </div>
+            <!-- 列表 -->
+            <div class="bcj-list">
+                <ul>
+                    <!-- 模板引擎tpl2 -->
+                </ul>
+            </div>
+        </section>
+        <!-- 尾部 -->
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </footer>
+        <!-- 向上 -->
+        <div class="go-top" style="display: none;"></div>
+    </div>
+    <script src="./lib/template-web.js"></script>
+    <!-- 模板引擎tpl -->
+    <script type="text/html" id="tpl">
+        {{each result v i}}
+            <li class="fl tab-content"><a href="javascript:;" data-id="{{v.titleId}}">{{v.title}}</a></li>
+        {{/each}}
+    </script>
+    <!-- 模板引擎tpl2 -->
+    <script type="text/html" id="tpl2">
+        {{each result v i}}
+        <li class="bcj-product">
+            <a href="{{v.productCoupon.src}}" target="_blank" class="">
+                <div class="bcj-product-pic"><img src="{{v.productImg}}" alt=""></div>
+                <div class="bcj-product-content">
+                    <p class="text one-txt-cut">{{v.productName}}</p>
+                    <div class="price "><span class="now-price">{{v.productNowPrice}}</span><span class="old-price">{{v.productOldPrice}}</span></div>
+                    <div class="ticket">
+                        <i>{{v.productCouponRemainPercent}}%</i>
+                        <span>{{v.productCouponRemainQuantity}}</span>
+                    </div>
+                    <div class="link">
+                        <span>点此领取10元优惠券</span> 
+                        <span>下单链接</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>

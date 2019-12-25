@@ -1,0 +1,114 @@
+.main{
+    background-color: #eee;
+    .bcj-title{
+        // position: fixed;
+        .tab-outbox{
+            width: 100%;
+            background-color: #fff;
+            overflow: auto;
+            .tab-inbox{
+                // width: 20rem /* 1000/50 */;
+                // 宽度通过js计算并添加
+                .tab-content{
+                    a{
+                        display: block;
+                        line-height: .72rem /* 36/50 */;
+                        font-size: 14px;
+                        color: #333;
+                        margin: 0 .24rem /* 12/50 */;
+                    }
+                }
+            }
+        }
+    }
+    .bcj-list{
+        ul{
+            .bcj-product{
+                margin-top: .08rem /* 4/50 */;
+                padding: .24rem /* 12/50 */;
+                background-color: #fff;
+                a{
+                    display: flex;
+                    .bcj-product-pic{
+                        border: 1px solid #ccc;
+                        width:130px;
+                        height: 130px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .bcj-product-content{
+                        padding-left:12px;
+                        flex: 1;
+                        position: relative;
+                        .text{
+                            font-size: 16px;
+                        }
+                        .price{
+                            margin: 7px 0;
+                            .now-price{
+                                font-size: 20px;
+                                color: #fc353a;
+                                vertical-align: middle;
+                            }
+                            .old-price{
+                                margin-left:10px;
+                                font-size: 14px;
+                                color: #ccc;
+                                text-decoration: line-through;
+                                vertical-align: middle;
+                            }
+                        }
+                        .ticket{
+                            i{  
+                                display: inline-block;
+                                width: 100px;
+                                height: 18px;
+                                border-radius: 9px;
+                                border: 1px solid rgb(252, 53, 58);
+                                background-color: rgba(252,53,58, .4);
+                                color: #fff;
+                                text-align: center;
+                                font-weight: 500;
+                            }
+                            span{
+                                color: #fc353a;
+                            }
+                        }
+                        .link{
+                            span:nth-child(1){
+                                margin-left: 12px;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                padding: .05rem /* 10/50 */;
+                                color: #fc353a;
+                                border: 1px dashed #fc353a;
+                            }
+                            span:nth-child(2){
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                padding: .05rem /* 10/50 */;
+                                background-color: #fc353a;
+                                color: #fff;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+.go-top{
+    width:50px;
+    height: 50px;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 50%;
+    position: fixed;
+    right: 12px;
+    bottom: 50px;
+}

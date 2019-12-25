@@ -14,4 +14,12 @@ $(function(){
         // $(window).scrollTop(0)
         $('html').animate({scrollTop:0},500,'linear')
     })
+    
+    $('.go-top').on('click',function(){
+        $('html').animate({scrollTop:0},500,'linear')
+    })
+    
+    $(window).scroll(function(){
+        $(this).scrollTop() ? $('.go-top').fadeIn():$('.go-top').fadeOut()
+    })
 })

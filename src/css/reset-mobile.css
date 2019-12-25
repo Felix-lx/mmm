@@ -135,7 +135,7 @@ textarea {
   -webkit-box-orient: vertical;
 }
 body {
-  font: 12px/1.5 'microsoft yahei', Arial, Verdana, "\5b8b\4f53";
+  font: 12px/1.5 Arial, 'microsoft yahei', Verdana, "\5b8b\4f53";
   color: #000;
   background-color: #f7f7f7;
 }
