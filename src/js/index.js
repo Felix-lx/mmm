@@ -9,7 +9,7 @@ $(function(){
     })
 
     $('.menu ul').on('click','.more',function(){
-        $(this).nextAll().toggleClass('conceal')
+        $(this).nextAll().toggleClass('conceal').toggleClass('animate')
     })
 
     $.ajax({

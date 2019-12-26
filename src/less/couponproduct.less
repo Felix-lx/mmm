@@ -1,0 +1,72 @@
+.header{
+    background-color: #f4483e;
+    display: flex;
+    .header-left,
+    .header-right{
+        width: 1rem;
+        height: 1rem;
+        a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            font: 500 24px/1rem Aril;
+            color: #fff;
+            img{
+                width: .68rem /* 34/50 */;
+            }
+        }
+    }
+    .header-center{
+        flex: 1;
+        font: 500 24px/1rem Aril;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.coupon-product{
+    .coupon-product-tip{
+        font-size: 12px;
+        color: #ccc;
+        text-align: center;
+        margin-top: 8px;
+    }
+    .coupon-product-list{
+        li{
+            padding: .24rem /* 12/50 */;
+            border-bottom: 1px solid #e7e7e7;
+            .sales-list{
+                display: flex;
+                .pic{
+                    width: 2rem /* 100/50 */;
+                    height: 2rem /* 100/50 */;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .info{
+                    padding-left: .24rem /* 12/50 */;
+                    flex: 1;
+                    font-size: 14px;
+                    position: relative;
+                    .price{
+                        color: red;
+                        padding-top: .28rem /* 14/50 */;
+                    }
+                    .others{
+                        width: 100%;
+                        padding-left: .24rem /* 12/50 */;
+                        justify-content: space-between;
+                        color: #ee7700;
+                        font-size: .24rem /* 12/50 */;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

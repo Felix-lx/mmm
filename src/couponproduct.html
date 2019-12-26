@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/reset-mobile.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/coupon.css">
+    <link rel="stylesheet" href="./css/couponproduct.css">
     <script src="./lib/jquery-3.4.1.js"></script>
     <script src="./js/rem.js"></script>
 </head>
@@ -21,7 +21,7 @@
             <div class="header-left">
                 <a href="javascript:history.go(-1);"><i class="fa fa-angle-left fa-lg"></i></a>
             </div>
-            <div class="header-center">优惠券</div>
+            <div class="header-center"></div>
             <div class="header-right">
                 <a href="javascript:;">
                     <img src="./img/header_app.png">
@@ -29,9 +29,10 @@
             </div>
         </header>
         <!-- 内容 -->
-        <section class="coupon">
-            <ul class="coupon-list clearfix">
-                <!-- 模板引擎tpl -->
+        <section class="coupon-product">
+            <p class="coupon-product-tip">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+            <ul class="coupon-product-list">
+                <!-- 模板引擎tpl -->                
             </ul>
         </section>
         <!-- 尾部 -->
@@ -54,16 +55,25 @@
     </div>
     <script src="./lib/template-web.js"></script>
     <script type="text/html" id="tpl">
-        {{each result v i}}
-        <li class="fl">
-            <a href="{{v.couponLink}}?couponid={{v.couponId}}&name={{v.couponTitle}}">
-                <img src="./img/ic_temai.png" alt="">
-                <p> {{v.couponTitle}} </p>
+        {{each result v i }}
+        <li>
+            <a href="javascript:;" class="sales-list">
+                <div class="pic">
+                    <img src="{{v.couponProductImg.src}}" alt="{{v.couponProductImg.alt}}">
+                </div>
+                <div class="info">
+                    <div class="content two-txt-cut">{{v.couponProductName}}</div>
+                    <div class="price">{{v.couponProductPrice}}</div>
+                    <div class="others">{{v.couponProductTime}}</div>
+                </div>
             </a>
         </li>
         {{/each}}
     </script>
-    <script src="./js/coupon.js"></script>
+    <script type="text/html" id="tpl2">
+        {{name1}}优惠券
+    </script>
+    <script src="./js/couponproduct.js"></script>
 </body>
 
 </html>

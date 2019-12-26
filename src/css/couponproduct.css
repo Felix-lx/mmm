@@ -1,0 +1,69 @@
+.header {
+  background-color: #f4483e;
+  display: flex;
+}
+.header .header-left,
+.header .header-right {
+  width: 1rem;
+  height: 1rem;
+}
+.header .header-left a,
+.header .header-right a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  font: 500 24px/1rem Aril;
+  color: #fff;
+}
+.header .header-left a img,
+.header .header-right a img {
+  width: 0.68rem /* 34/50 */;
+}
+.header .header-center {
+  flex: 1;
+  font: 500 24px/1rem Aril;
+  text-align: center;
+  color: #fff;
+}
+.coupon-product .coupon-product-tip {
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+  margin-top: 8px;
+}
+.coupon-product .coupon-product-list li {
+  padding: 0.24rem /* 12/50 */;
+  border-bottom: 1px solid #e7e7e7;
+}
+.coupon-product .coupon-product-list li .sales-list {
+  display: flex;
+}
+.coupon-product .coupon-product-list li .sales-list .pic {
+  width: 2rem /* 100/50 */;
+  height: 2rem /* 100/50 */;
+}
+.coupon-product .coupon-product-list li .sales-list .pic img {
+  width: 100%;
+  height: 100%;
+}
+.coupon-product .coupon-product-list li .sales-list .info {
+  padding-left: 0.24rem /* 12/50 */;
+  flex: 1;
+  font-size: 14px;
+  position: relative;
+}
+.coupon-product .coupon-product-list li .sales-list .info .price {
+  color: red;
+  padding-top: 0.28rem /* 14/50 */;
+}
+.coupon-product .coupon-product-list li .sales-list .info .others {
+  width: 100%;
+  padding-left: 0.24rem /* 12/50 */;
+  justify-content: space-between;
+  color: #ee7700;
+  font-size: 0.24rem /* 12/50 */;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
