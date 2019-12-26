@@ -5,7 +5,7 @@ $(function(){
         success:function(info){
             console.log(info);
             $('.inland-discount').html(template('tpl',info))
-            
+            $("img.lazyload").lazyload();
         }
     })
 })

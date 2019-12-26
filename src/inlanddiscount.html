@@ -58,7 +58,7 @@
             {{each result v i}}
             <li class="inland-Product fl">
                 <a href="discount.html?productid={{v.productId}}">
-                    <div class="pic"><img src="{{v.productImg.src}}" alt="{{v.productImg.alt}}"></div>
+                    <div class="pic"><img class="lazyload" data-original="{{v.productImg.src}}" src="" alt="{{v.productImg.alt}}"></div>
                     <p class="two-txt-cut">{{v.productName}}</p>
                     <div class="price one-txt-cut">{{v.productPrice}}</div>
                     <div class="from">{{v.productFrom}}</div>
@@ -67,6 +67,7 @@
             {{/each}}
         </ul>
     </script>
+    <script src="./lib/jquery.lazyload.js"></script>
     <script src="./js/inlanddiscount.js"></script>
 </body>
 </html>

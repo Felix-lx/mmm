@@ -34,6 +34,7 @@ $(function () {
                 })
                 console.log(info)
                 $('.bcj-list ul').html(template('tpl2', info))
+                $("img.lazyload").lazyload();
             }
         })
     }

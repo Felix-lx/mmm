@@ -16,11 +16,11 @@ $(function(){
             categoryid:categoryid[1]
         },
         success:function(info){
-            // console.log(info.result);
+            console.log(info);
             $('.breadcrumb').html(template('tpl',info))
         }
     })
-    // 产品信息和导航生成
+    // 产品信息和分页生成
     function render(){
         $.ajax({
             type:'get',
@@ -31,7 +31,7 @@ $(function(){
             },
             success:function(info){
                 // tpl2产品列表动态渲染
-                // console.log(info.result.list);
+                console.log(info);
                 $('.productlist ul').html(template('tpl2',info))
 
                 // tpl3分页动态渲染
@@ -48,6 +48,8 @@ $(function(){
     }
     let pageNum
     render()
+    console.log(pageNum);
+    
 
     // 导航的单独点击事件
 
@@ -88,9 +90,11 @@ $(function(){
     })
     // 右点击
     $('.pages-box').on('click','.pages-next',function(){
-        console.log(111);
+
         let id = $('.mui-active').children('a').data('id')
         console.log(id);
+        console.log(pageNum);
+        
         if(id >= pageNum){
             return
         }else{

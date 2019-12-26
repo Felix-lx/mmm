@@ -24,7 +24,7 @@
             <div class="header-center">白菜价-淘宝内部劵</div>
             <div class="header-right">
                 <a href="javascript:;">
-                    <img src="./img/header_app.png">
+                    <img class="lazyload" src="./img/header_app.png">
                 </a>
             </div>
         </header>
@@ -51,7 +51,7 @@
                 <span class="login">登录</span>
                 <span class="register">注册</span>
                 <span class="back-top">
-                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+                    <img class="lazyload" src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
             </div>
             <div class="foot">
                 <p>
@@ -78,7 +78,7 @@
         {{each result v i}}
         <li class="bcj-product">
             <a href="{{v.productCoupon.src}}" target="_blank" class="">
-                <div class="bcj-product-pic"><img src="{{v.productImg}}" alt=""></div>
+                <div class="bcj-product-pic"><img class="lazyload" data-original="{{v.productImg}}" src="" alt="加载失败"></div>
                 <div class="bcj-product-content">
                     <p class="text one-txt-cut">{{v.productName}}</p>
                     <div class="price "><span class="now-price">{{v.productNowPrice}}</span><span class="old-price">{{v.productOldPrice}}</span></div>
@@ -95,6 +95,7 @@
         </li>
         {{/each}}
     </script>
+    <script src="./lib/jquery.lazyload.js"></script>
     <script src="./js/baicaijia.js"></script>
 </body>
 
