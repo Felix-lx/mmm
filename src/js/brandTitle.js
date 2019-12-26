@@ -1,0 +1,9 @@
+$(function(){
+    $.ajax({
+        url:'http://localhost:3000/api/getbrandtitle',
+        success:function(info){
+            console.log(info);
+            $('.brand-title').html(template('tpl2',info))
+        }
+    })
+})

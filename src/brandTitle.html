@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brandTitle.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left fl">
+                <a href="./index.html">
+                    <img src="./img/header_logo.png">
+                </a>
+            </div>
+            <div class="header-right fr">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+        <!-- 搜索框 -->
+        <section class="search">
+            <input type="text" class="searchbox" placeholder="请输入你想比价的商品">
+            <button type="button">搜索</button>
+        </section>
+        <!-- 面包屑 -->
+        <ol class="breadcrumb">
+            <li><a href="./index.html">首页</a></li>
+            <li class="active">品牌大全</li>
+        </ol>
+        <!-- 列表标题 -->
+        <section class="brand-tip">
+            <div>热门品牌排行</div>
+        </section>
+        <!-- 产品列表 -->
+        <section class="brand">
+            <ul class="brand-title">
+            <!-- 模板引擎tpl2 -->
+            </ul>
+        </section>
+        <!-- 尾部 -->
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+
+            </div>
+        </footer>
+    </div>
+    <script src="lib/template-web.js"></script>
+    <!-- 商品列表渲染 -->
+    <script type="text/html" id="tpl2">
+        {{each result v i}}
+            <li>
+                <a class="brand-menu-title clearfix" href="brand.html?brandtitleid={{v.brandTitleId}}&brandtitle={{v.brandTitle}}">
+                    {{v.brandTitle}}
+                    <i class="fa fa-angle-right fa-lg fr"></i> 
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/brandTitle.js"></script>
+</body>
+
+</html>
