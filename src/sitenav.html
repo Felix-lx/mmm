@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sitenav.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left">
+                <a href="javascript:history.go(-1);"><i class="fa fa-angle-left fa-lg"></i></a>
+            </div>
+            <div class="header-center">商城导航</div>
+            <div class="header-right">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+        <!-- 主页面 -->
+        <section class="sitenav clearfix">
+            <!-- 模板引擎tpl -->
+            
+        </section>
+        <!-- 尾部 -->
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./lib/template-web.js"></script>
+    <!-- 模板引擎tpl1 -->
+    <script type="text/html" id="tpl">
+        {{each result v i}}
+            <div class="nav fl"><a href="{{v.navHref}}"><img src="{{v.navImg}}">{{v.navTitle}}</a></div>
+        {{/each}}
+    </script>
+    <script src="./js/sitenav.js"></script>
+</body>
+</html>
