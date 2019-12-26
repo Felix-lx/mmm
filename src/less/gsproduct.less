@@ -1,0 +1,117 @@
+.header{
+    background-color: #ff841d;
+    display: flex;
+    .header-left,
+    .header-right{
+        width: 1rem;
+        height: 1rem;
+        a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            font: 500 24px/1rem Aril;
+            color: #fff;
+            img{
+                width: .68rem /* 34/50 */;
+            }
+        }
+    }
+    .header-center{
+        flex: 1;
+        font: 500 .48rem /* 24/50 *//1rem Aril;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.gsproduct{
+    background-color: #f1f1f1;
+    .gsproduct-title{
+        display: flex;
+        border-bottom: 1px solid #dadada;
+        background-color: #fff;
+        .tab-inbox{
+            flex: 1;
+            display: flex;
+            .tab-inbox-list{
+                flex: 1;
+                padding: 0 5px;
+                line-height: .72rem /* 36/50 */;
+                font-size: .28rem /* 14/50 */;
+                color: #333;
+                text-align: center;
+            }
+        }
+        .search{
+            width: .72rem;
+            height: .72rem;
+            border-left: 1px solid #dadada;
+            padding: 0;
+            a{
+                display: block;
+                width: 30px;
+                height: 30px;
+                margin: auto;
+                background: url('../img/icon_bar.png') -95px -8px;
+            }
+        }
+    }
+    .gsproduct-title-list{
+        width: 100%;
+        position: relative;
+        .tab-content{
+            display: none;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            li{
+                background-color: #fff;
+                border-bottom: 1px solid #dadada;
+                font-size: .28rem /* 14/50 */;
+                line-height: 40px;
+                color: #333;
+                padding: 0 2%;
+
+            }
+        }
+
+    }
+    .gsproduct-list{
+        ul{
+            padding: 1%;
+            .gsproduct-list-content{
+                width: 48%;
+                margin: 1%;
+                background-color: #fff;
+                a{
+                    display: block;
+                }
+                .pic{
+                    text-align: center;
+                    padding: .2rem /* 10/50 */;
+                    height: 3.2rem ;
+                    img{
+                        width: 2.8rem /* 140/50 */;
+                        height: 2.8rem /* 140/50 */ ;
+                    }
+                }
+                p{
+                    height: 36px;
+                    padding: 0 .2rem /* 10/50 */;
+                    font:700 14px arial;
+                }
+                .price{
+                    padding: .1rem /* 5/50 */ .2rem /* 10/50 */;
+                    color: red;
+                }
+                .from{
+                    padding: .1rem /* 5/50 */ .2rem /* 10/50 */;
+                    color: #ccc;
+                }
+
+            }
+        }
+    }
+}

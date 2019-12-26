@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买买买</title>
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset-mobile.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <script src="./lib/jquery-3.4.1.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header class="header clearfix">
+            <div class="header-left">
+                <a href="javascript:history.go(-1);"><i class="fa fa-angle-left fa-lg"></i></a>
+            </div>
+            <div class="header-center">凑单品</div>
+            <div class="header-right">
+                <a href="javascript:;">
+                    <img src="./img/header_app.png">
+                </a>
+            </div>
+        </header>
+        <!-- 主页面 -->
+        <section class="gsproduct">
+            <div class="gsproduct-title">
+                <ul class="tab-inbox">
+                    <li class="tab-inbox-list tab-inbox-list-from one-txt-cut">京东</li>
+                    <li class="tab-inbox-list tab-inbox-list-area one-txt-cut" data-url="http://localhost:3000/api/getgsshoparea">全国</li>
+                    <li class="tab-inbox-list tab-inbox-list-price one-txt-cut" data-url="">全部价格</li>
+                </ul>
+                <div class="search">
+                    <a href="javascript:;"></a>
+                </div>
+            </div>
+            <div class="gsproduct-title-list">
+                <ol class="tab-content tab-content1">
+                    <!-- 模板引擎tpl1 -->
+                </ol>
+                <ol class="tab-content tab-content2">
+                    <!-- 模板引擎tpl2 -->
+                </ol>
+            </div>
+            <div class="gsproduct-list">
+                <!-- 模板引擎tpl3 -->
+            </div>
+        </section>
+        <!-- 尾部 -->
+        <footer class="footer">
+            <div class="nav">
+                <span class="login">登录</span>
+                <span class="register">注册</span>
+                <span class="back-top">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg">返回顶部</span>
+            </div>
+            <div class="foot">
+                <p>
+                    <a href="javascript:;">手机app下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./lib/template-web.js"></script>
+    <!-- 模板引擎tpl1 -->
+    <script type="text/html" id="tpl1">
+        {{each result v i}}
+        <li class="tab-content-list" data-shopid="{{v.shopId}}">{{v.shopName}} </li>
+        {{/each}}
+    </script>
+
+    <!-- 模板引擎tpl2 -->
+    <script type="text/html" id="tpl2">
+        {{each result v i}}
+        <li class="tab-content-list" data-areaId="{{v.areaId}}">{{v.areaName}} </li>
+        {{/each}}
+    </script>
+
+    <!-- 模板引擎tpl3 -->
+    <script type="text/html" id="tpl3">
+        <ul class="clearfix">
+            {{each result v i}}
+            <li class="gsproduct-list-content fl">
+                <a href="javascript:;">
+                    <div class="pic"><img src="{{v.productImg}}"></div>
+                    <p class="two-txt-cut">{{v.productName}}</p>
+                    <div class="price one-txt-cut">{{v.productPrice}}</div>
+
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script src="./js/gsproduct.js"></script>
+</body>
+</html>
