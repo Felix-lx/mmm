@@ -1,19 +1,15 @@
 $(function(){  
-    let address =window.location.search
-    address = decodeURI(address).replace('?','')
-    const arr = address.split('&')
-    // console.log(arr);
-    const categoryid = arr[0].split('=')
-    const category = arr[1].split('=')
-    // console.log(categoryid[1]);
-    // console.log(category[1]);
+    const categoryid =decodeURI(window.location.search).replace('?','').split('&')[0].split('=')[1]
+    const category = decodeURI(window.location.search).replace('?','').split('&')[1].split('=')[1]
+    console.log(categoryid);
+    console.log(category);
 
     // 导航请求
     $.ajax({
         type:'get',
         url:'http://localhost:3000/api/getcategorybyid',
         data:{
-            categoryid:categoryid[1]
+            categoryid:categoryid
         },
         success:function(info){
             console.log(info);
@@ -26,8 +22,8 @@ $(function(){
             type:'get',
             url:'http://localhost:3000/api/getproductlist',
             data:{
-                categoryid:categoryid[1],
-                category:category[1]
+                categoryid:categoryid,
+                category:category
             },
             success:function(info){
                 // tpl2产品列表动态渲染
@@ -46,9 +42,9 @@ $(function(){
             }
         })
     }
-    let pageNum
+
     render()
-    console.log(pageNum);
+
     
 
     // 导航的单独点击事件
@@ -59,8 +55,8 @@ $(function(){
             type:'get',
             url:'http://localhost:3000/api/getproductlist',
             data:{
-                categoryid:categoryid[1],
-                category:category[1],
+                categoryid:categoryid,
+                category:category,
                 pageid:id
             },
             success:function(info){
