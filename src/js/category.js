@@ -1,5 +1,4 @@
 $(function(){
-    let titleId
     // 一级模板引擎的ajax请求
     $.ajax({
         type:'get',
@@ -21,7 +20,7 @@ $(function(){
     }
     // 点击一级菜单触发二级模板引擎发送请求
     $('.category-title').on('click','li',function(){
-        titleId = $(this).data('titleid')
+        let titleId = $(this).data('titleid')
         $(this).children('ul').toggleClass('hidden').hasClass('hidden')? '':secondContent(titleId)
     })
 })
