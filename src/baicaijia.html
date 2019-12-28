@@ -84,7 +84,9 @@
                     <div class="price "><span class="now-price">{{v.productNowPrice}}</span><span class="old-price">{{v.productOldPrice}}</span></div>
                     <div class="ticket">
                         <i><em>{{v.productCouponRemainPercent}}%</em> 
-                            <b style="width: {{if v.productCouponRemainPercent<10 }}10{{else}}{{v.productCouponRemainPercent}}{{/if}}%"></b></i>
+                            <b></b></i>
+                            <!-- 下一行的代码原本是写在b标签里面的，但现在在js中通过添加宽度实行动画效果，所以不需要了 -->
+                            <!-- style="width: {{if v.productCouponRemainPercent<10 }}10{{else}}{{v.productCouponRemainPercent}}{{/if}}%" -->
                         <span>{{v.productCouponRemainQuantity}}</span>
                     </div>
                     <div class="link">

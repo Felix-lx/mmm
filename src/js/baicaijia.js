@@ -35,11 +35,13 @@ $(function () {
                         element.productCouponRemainPercent = element.productCouponRemain.split('%')[0]
                         element.productCouponRemainQuantity = element.productCouponRemain.split('%')[1]
                         element.productNowPrice = element.productPrice.split('¥')[0]+'¥'+element.productPrice.split('¥')[1]
-                        element.productOldPrice = '¥'+element.productPrice.split('¥')[2]
+                        element.productOldPrice = '¥'+element.productPrice.split('¥')[2]           
                     })
                     console.log(info)
                     $('.bcj-list ul').html(template('tpl2', info))
-                    // $('.ticket b').css('width',info.result.productCouponRemainPercent+'%')
+                    info.result.forEach(element=>{
+                        $('.ticket b').animate( {width: element.productCouponRemainPercent+'%' },500,"linear")
+                    })
                     $("img.lazyload").lazyload();
                 }
             })
